@@ -8,12 +8,13 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <title>хуйня</title>
+  <title>Работа #1</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
 
-  <script src="js/script.js" charset="utf-8"></script>
+
 
   <div class="container-fluid row title-container">
     <div class="col-10 title">Работа N001</div>
@@ -23,38 +24,110 @@
 
   <div class="container-fluid main-container">
 
-      <div class="container-fluid exercise-container type1">
-        <div class="question1"> #1 Question ------ -------- -------- ----------- ------- ------- -------- ? </div>
-        <div class="answers1">
+      <div class="container-fluid exs-container">
+        <div class="question1"> #1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio cumque cum voluptatem harum atque mollitia rem accusamus iusto tempora fugiat eveniet rerum quaerat necessitatibus, dolore quam nesciunt consequuntur? </div>
+        <div class="answers-box">
 
-          <div class="form-check">
-            <input class="form-check-input checkboxes" type="radio" name="exs1Answers" id="exs1Answer1" value="option1">
-            <label class="form-check-label checkboxes-labels" for="exs1Answer1">
-              Answer 1
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs1Answers" type="radio" name="exs1Answers" id="exs1Answer1" value="option1">
+            <label class="form-check-label checkboxes-labels" for="exs1Answer1" id="exs1Answer1-label">
+              Answer 1. Lorem ipsum dolor sit amet.
             </label>
           </div>
-          <div class="form-check">
-            <input class="form-check-input checkboxes" type="radio" name="exs1Answers" id="exs1Answer2" value="option2">
-            <label class="form-check-label checkboxes-labels" for="exs1Answer2">
-              Answer 2
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs1Answers" type="radio" name="exs1Answers" id="exs1Answer2" value="option2">
+            <label class="form-check-label checkboxes-labels" for="exs1Answer2" id="exs1Answer2-label">
+              Answer 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro!
             </label>
           </div>
-          <div class="form-check">
-            <input class="form-check-input checkboxes" type="radio" name="exs1Answers" id="exs1Answer3" value="option3">
-            <label class="form-check-label checkboxes-labels" for="exs1Answer3">
-              Answer 3
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs1Answers" type="radio" name="exs1Answers" id="exs1Answer3" value="option3">
+            <label class="form-check-label checkboxes-labels" for="exs1Answer3" id="exs1Answer3-label">
+              Answer 3. Lorem ipsum dolor sit amet, consectetur.
             </label>
           </div>
-          <div class="form-check">
-            <input class="form-check-input checkboxes" type="radio" name="exs1Answers" id="exs1Answer4" value="option4">
-            <label class="form-check-label checkboxes-labels" for="exs1Answer4">
-              Answer 4
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs1Answers" type="radio" name="exs1Answers" id="exs1Answer4" value="option4">
+            <label class="form-check-label checkboxes-labels" for="exs1Answer4" id="exs1Answer4-label">
+              Answer 4. Lorem ipsum dolor sit amet.
             </label>
           </div>
+        </div>
 
+        <button onclick="checkExs(exs1)" type="button" name="button" class="exs-check-button btn btn-dark">Проверить</button>
+      </div>
+      <!-- ----------------2------------------ -->
 
+      <div class="container-fluid exs-container">
+        <div class="question1"> #2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet provident harum, facilis praesentium? </div>
+        <div class="answers-box">
+
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs2Answers" type="radio" name="exs2Answers" id="exs2Answer1">
+            <label class="form-check-label checkboxes-labels" for="exs2Answer1" id="exs2Answer1-label">
+              Answer 1. Lorem ipsum dolor sit amet, consectetur adipisicing.
+            </label>
+          </div>
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs2Answers" type="radio" name="exs2Answers" id="exs2Answer2">
+            <label class="form-check-label checkboxes-labels" for="exs2Answer2" id="exs2Answer2-label">
+              Answer 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, rem praesentium qui.
+            </label>
+          </div>
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs2Answers" type="radio" name="exs2Answers" id="exs2Answer3">
+            <label class="form-check-label checkboxes-labels" for="exs2Answer3" id="exs2Answer3-label">
+              Answer 3. Lorem ipsum dolor sit amet, consectetur.
+            </label>
+          </div>
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs2Answers" type="radio" name="exs2Answers" id="exs2Answer4">
+            <label class="form-check-label checkboxes-labels" for="exs2Answer4" id="exs2Answer4-label">
+              Answer 4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, ipsam.
+            </label>
+          </div>
+        </div>
+
+        <button onclick="checkExs2()" type="button" name="button" class="exs-check-button btn btn-dark">Проверить</button>
+      </div>
+
+    <!-- -------------3--------------- -->
+
+    <div class="container-fluid exs-container">
+      <div class="question1"> #3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio cumque cum voluptatem harum atque mollitia rem accusamus iusto tempora fugiat eveniet rerum quaerat necessitatibus. </div>
+      <div class="answers-box">
+
+        <div class="form-check answers-div">
+          <input class="form-check-input checkboxes exs3Answers" type="checkbox" name="exs3Answers" id="exs3Answer1">
+          <label class="form-check-label checkboxes-labels" for="exs3Answer1" id="exs3Answer1-label">
+            Answer 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur error vero cupiditate incidunt.
+          </label>
+        </div>
+        <div class="form-check answers-div">
+          <input class="form-check-input checkboxes exs3Answers" type="checkbox" name="exs3Answers" id="exs3Answer2">
+          <label class="form-check-label checkboxes-labels" for="exs3Answer2" id="exs3Answer2-label">
+            Answer 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore.
+          </label>
+        </div>
+        <div class="form-check answers-div">
+          <input class="form-check-input checkboxes exs3Answers" type="checkbox" name="exs3Answers" id="exs3Answer3">
+          <label class="form-check-label checkboxes-labels" for="exs3Answer3" id="exs3Answer3-label">
+            Answer 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident laborum soluta ex sint vitae, repudiandae!
+          </label>
+        </div>
+        <div class="form-check answers-div">
+          <input class="form-check-input checkboxes exs3Answers" type="checkbox" name="exs3Answers" id="exs3Answer4">
+          <label class="form-check-label checkboxes-labels" for="exs3Answer4" id="exs3Answer4-label">
+            Answer 4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, ipsum.
+          </label>
         </div>
       </div>
+
+      <button onclick="checkExs3()" type="button" name="button" class="exs-check-button btn btn-dark">Проверить</button>
+    </div>
+
+
+
 
 
 
@@ -63,12 +136,47 @@
 
   <div class="container-fluid text-center submission-container">
 
-      <button type="button" class="btn btn-dark check-button">Проверить (Сохранить)</button>
+      <button onclick="checkAll()" type="button" class="btn btn-dark check-button">Проверить и закончить</button>
 
+  </div>
+
+  <div class="results-wrap">
+  <div  class="results-box">
+
+  <div class="row text-center">
+      <div class="col-12 results-title">Результаты</div>
+  </div>
+  <div class="results row">
+      <div class="col-6 results-cols">EXS1 - </div>
+      <div class="col-6 results-cols">EXS6 - </div>
+  </div>
+  <div class="results row">
+      <div class="col-6 results-cols">EXS2 - </div>
+      <div class="col-6 results-cols">EXS7 - </div>
+  </div>
+  <div class="results row">
+      <div class="col-6 results-cols">EXS3 - </div>
+      <div class="col-6 results-cols">EXS8 - </div>
+  </div>
+  <div class="results row">
+      <div class="col-6 results-cols">EXS4 - </div>
+      <div class="col-6 results-cols">EXS9 - </div>
+  </div>
+  <div class="results row">
+      <div class="col-6 results-cols">EXS5 - </div>
+      <div class="col-6 results-cols">EXS10 - </div>
+  </div>
+
+
+  </div>
   </div>
 
 
 
+
+
+
+    <script src="js/script.js" charset="utf-8"></script>
 </body>
 
 </html>

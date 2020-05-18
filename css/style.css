@@ -14,18 +14,16 @@ body {
 }
 
 .main-container {
-  padding: 3% 15%;
+  padding: 3% 22%;
 }
 
-.exercise-container {
+.exs-container {
   background-color: rgb(184, 195, 227);
   padding: 15px 15px 2px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-.submission-container {
-  padding-bottom: 150px;
-}
 
 
 .checkboxes {
@@ -33,5 +31,44 @@ body {
 }
 
 .checkboxes-labels {
-  margin-left: 1%;
+  margin-left: 3%;
+}
+
+.answers-box {
+  margin-top: 10px;
+  position: relative;
+  top: 10px;
+}
+
+.answers-div {
+  width: 80%;
+}
+.answers-div:nth-child(odd) {
+  background: rgb(167, 181, 217);
+}
+
+.exs-check-button {
+  width: 100px;
+  position: relative;
+  left: 90%;
+  bottom: 10px;
+}
+
+.results-wrap {
+  padding: 3% 25%;
+}
+
+.results-box {
+  height: 500px;
+  background-color: rgb(184, 195, 227);
+  border-radius: 5px;
+  display: none;
+}
+
+.results-title {
+  padding: 20px;
+}
+
+.results {
+  padding: 20px 50px;
 }
