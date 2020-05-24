@@ -121,9 +121,17 @@ function checkExs3() {
 
 
   function checkAll() {
-    $('.results-box').toggle()
+    $('.submission-container').fadeOut(200);
+    $('.results-box').slideDown(500,'linear');
+    $('html,body').animate({ scrollTop: 2000 }, 'slow')
   }
 
+
+
+// $('html,body').animate({ scrollTop: 0 }, 'slow');
+
+//    window.scrollBy(0, 300);
+    //toggle(speed,easing,callback)
 
 
     // var titles = $('input[type=checkbox]:checked').map(function() {
