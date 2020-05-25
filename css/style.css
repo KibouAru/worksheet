@@ -2,12 +2,10 @@
 body {
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 25px;
-  background-color: rgb(242, 245, 252);
-  /* background: rgb(242,245,252);
-  background: linear-gradient(180deg, rgba(242,245,252,1) 0%, rgba(242,245,252,1) 50%, rgba(184,195,227,1) 100%); */
-  background: rgb(242,242,252);
-background: linear-gradient(180deg, rgba(242,242,252,1) 0%, rgba(242,244,252,1) 4%, rgba(197,210,238,1) 100%);
+  background-color: #f4f4f4;
 }
+
+/* #DCD0C0 #C0B283 #F4F4F4 #373737 */
 
 .title {
   font-size: 40px;
@@ -18,11 +16,13 @@ background: linear-gradient(180deg, rgba(242,242,252,1) 0%, rgba(242,244,252,1) 
 }
 
 .main-container {
-  padding: 3% 22%;
+    width: 70%;
+    background-color: #C0B283;
+    padding: 1% 6% 3%;
 }
 
 .exs-container {
-  background-color: rgb(184, 195, 227);
+  background-color: #DCD0C0;
   padding: 15px 15px 2px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -48,7 +48,7 @@ background: linear-gradient(180deg, rgba(242,242,252,1) 0%, rgba(242,244,252,1) 
   width: 80%;
 }
 .answers-div:nth-child(odd) {
-  background: rgb(167, 181, 217);
+  background: rgba(167, 181, 217,0.3);
 }
 
 .exs-check-button {
@@ -63,12 +63,13 @@ background: linear-gradient(180deg, rgba(242,242,252,1) 0%, rgba(242,244,252,1) 
 }
 
 .results-wrap {
-  padding: 0 25% 3%;
+  padding: 0 10% 20%;
+  margin-top: 20px;
 }
 
 .results-box {
   height: 500px;
-  background-color: rgb(184, 195, 227);
+  background-color: #DCD0C0;
   border-radius: 5px;
   display: none;
 }
@@ -84,8 +85,13 @@ background: linear-gradient(180deg, rgba(242,242,252,1) 0%, rgba(242,244,252,1) 
 }
 
 .results-cols {
-  background-color: rgb(167, 181, 217);
+  background-color: rgba(167, 181, 217,0.3);
   margin-right: 8%;
+}
+
+.span {
+  position: relative;
+  left: 40%;
 }
 
 .dot-box {
@@ -112,8 +118,4 @@ background: linear-gradient(180deg, rgba(242,242,252,1) 0%, rgba(242,244,252,1) 
   font-size: 82px;
   font-weight: bold;
   color: ghostwhite;
-}
-
-.bottom-space {
-  height: 150px;
 }
