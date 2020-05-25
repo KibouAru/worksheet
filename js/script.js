@@ -63,19 +63,33 @@ function highlightAnswersT1(exs) {
 
 var exs1 = {
   condition: "unknown",
-  correctAnswerId: "exs1Answer1",
+  correctAnswerId: "exs1Answer4",
   maxScore: 1,
   amountOfAnswers: 4
 }
 var exs2 = {
   condition: "unknown",
-  correctAnswerId: "exs2Answer4",
+  correctAnswerId: "exs2Answer1",
   maxScore: 1,
   amountOfAnswers: 4
 }
 var exs3 = {
   condition: "unknown",
-  correctAnswersId: ["exs3Answer1","exs3Answer3"],
+  correctAnswersId: ["exs3Answer2","exs3Answer3"],
+  maxScore: 2,
+  amountOfAnswers: 4
+}
+var exs4 = {
+  condition: "unknown",
+  correctAnswerId: "exs4Answer1",
+  maxScore: 1,
+  amountOfAnswers: 4
+}
+var exs10 = {
+  condition: "unknown",
+  correctAnswerId: "exs10Answer2",
+  maxScore: 1,
+  amountOfAnswers: 4
 }
 
 //
@@ -198,6 +212,8 @@ function checkExs3(forced) {
       if (exs1.condition == "unknown") {checkExs1('exs1',true)}
       if (exs2.condition == "unknown") {checkExs1('exs2',true)}
       if (exs3.condition == "unknown") {checkExs3(true)}
+      if (exs4.condition == "unknown") {checkExs1('exs4',true)}
+      if (exs10.condition == "unknown") {checkExs1('exs10',true)}
     }
 
     function displayResult() {
