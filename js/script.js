@@ -220,6 +220,8 @@ function checkExs3(forced) {
       $("#exs1Result span span").text(exs1.condition)
       $("#exs2Result span span").text(exs2.condition)
       $("#exs3Result span span").text(exs3.condition)
+      $("#exs4Result span span").text(exs4.condition)
+      $("#exs10Result span span").text(exs10.condition)
     }
 
     // function colorResults() {
