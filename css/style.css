@@ -20,7 +20,25 @@ body {
     background-color: #C0B283;
     padding: 1% 6% 3%;
 }
-
+.text-part {
+  display: inline-block;
+  vertical-align: top;
+  width: 71%;
+  min-height: 320px;
+}
+.question-div {
+  width: 95%;
+}
+.image-part {
+  display: inline-block;
+  vertical-align: top;
+}
+.image {
+  width: 300px;
+  height: 300px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
 .exs-container {
   background-color: #DCD0C0;
   padding: 15px 15px 2px;
@@ -28,14 +46,12 @@ body {
   border-radius: 5px;
 }
 
-
-
 .checkboxes {
   width: 25px; height: 25px;
 }
 
 .checkboxes-labels {
-  margin-left: 3%;
+  margin-left: 20px;
 }
 
 .answers-box {
@@ -47,7 +63,13 @@ body {
 .answers-div {
   width: 80%;
 }
+.answers-div-alt {
+  width: 98%
+}
 .answers-div:nth-child(odd) {
+  background: rgba(167, 181, 217,0.3);
+}
+.answers-div-alt:nth-child(odd) {
   background: rgba(167, 181, 217,0.3);
 }
 
@@ -78,6 +100,7 @@ body {
   width: 50%;
   padding: 5%;
   height: 100%;
+  background-color: #c4bba5;
 }
 
 .results-rows {

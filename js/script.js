@@ -85,6 +85,18 @@ var exs4 = {
   maxScore: 1,
   amountOfAnswers: 4
 }
+var exs5 = {
+  condition: "unknown",
+  correctAnswerId: "exs5Answer1",
+  maxScore: 1,
+  amountOfAnswers: 3
+}
+var exs7 = {
+  condition: "unknown",
+  correctAnswerId: "exs7Answer3",
+  maxScore: 1,
+  amountOfAnswers: 4
+}
 var exs10 = {
   condition: "unknown",
   correctAnswerId: "exs10Answer2",
