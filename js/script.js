@@ -233,6 +233,9 @@ function checkExsT1(exs,forced) {
       else if ($("#"+exsVar.correctAnswerId).is(':checked')) {
           exsVar.condition = 1;
           }
+      else {
+          exsVar.condition = 0;
+      }
 
           highlightAnswers(exs)
           $("input."+exs+"Answers").attr("disabled", true);
@@ -315,26 +318,27 @@ function checkExsT2(exs,forced) {
       $("#exs10Result span").text(exs10.condition + '/' + exs10.maxScore)
     }
 
-    // function colorResults() {
-    //   switch (exs1.condition) {
-    //     case 2: $("#exs1Result").css("backgroundColor","green");
-    //     case 1: $("#exs1Result").css("backgroundColor","yellow");
-    //     case 0: $("#exs1Result").css("backgroundColor","red");
-    //     break;
-    //   }
-    //   switch (exs2.condition) {
-    //     case 2: $("#exs2Result").css("backgroundColor","green");
-    //     case 1: $("#exs2Result").css("backgroundColor","yellow");
-    //     case 0: $("#exs2Result").css("backgroundColor","red");
-    //     break;
-    //   }
-    //   switch (exs3.condition) {
-    //     case 2: $("#exs3Result").css("backgroundColor","green");
-    //     case 1: $("#exs3Result").css("backgroundColor","yellow");
-    //     case 0: $("#exs3Result").css("backgroundColor","red");
-    //     break;
-    //   }
-    // }
+    function colorResults() {
+      var count = 1;
+      var exs = ("exs");
+      var exsVar = eval(exs);
+
+      do {
+        exs = ("exs" + count);
+        exsVar = eval(exs);
+
+        if (exsVar.condition == exsVar.maxScore) {$("#"+exs+"Result").css("backgroundColor","rgba(131, 220, 147, 1)");}
+        else if (exsVar.condition == 0) {$("#"+exs+"Result").css("backgroundColor","rgba(227, 66, 66, 1)");}
+        else {$("#"+exs+"Result").css("backgroundColor","orange");}
+
+        exs = exs.slice(0,-1);
+        count++
+
+      } while (count <= 10)
+
+    }
+
+
 
   function checkAllButton() {
     $('.submission-container').fadeOut(200);
@@ -343,7 +347,7 @@ function checkExsT2(exs,forced) {
 
     disableUnchecked();
     displayResult();
-    // colorResults();
+    colorResults();
   }
 
 
