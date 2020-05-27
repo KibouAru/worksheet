@@ -1,64 +1,3 @@
-// Проверяет на случай если ответы не выбраны
-function noneChousen(exs) {
-  var int = eval(exs).amountOfAnswers;
-  var itr = 1;
-
-  do  {
-    if ($("#"+exs+"Answer"+String(itr)).prop('checked') == false) {
-      // $("#"+exs+"Answer"+String(itr)+"-label").css("backgroundColor","grey"); debug
-      itr++;
-    }
-    else {
-      break;
-    }
-  } while ((itr-1) <= int);
-
-
-  if ((itr-1) == int) {
-    return 1;
-  }
-  else {
-    return 0;
-  }
-}
-
-// В зависимости от правильности ответа выделить все тусклым цветом, затем выделить выбранные ярким
-function highlightAnswersT1(exs) {
-  var int = eval(exs).amountOfAnswers;
-  var exsVar = eval(exs);
-  var count = 1
-   // шаг 1
-    do {
-      if ('#' + exs + 'Answer' + count == "#" + exsVar.correctAnswerId)   {
-        $('#' + exs + 'Answer' + count + "-label").css("backgroundColor","rgba(131, 192, 160, 0.5)")
-      }
-      else {
-        $('#' + exs + 'Answer' + count + "-label").css("backgroundColor","rgba(192, 131, 131,0.5)")
-      }
-      count++
-    } while (count <= int)
-
-    // шаг 2
-    count = 1;
-
-    do {
-      if ('#' + exs + 'Answer' + count == "#" + $('.'+exs+'Answers[type=radio]:checked').attr("id"))   {
-        if ('#' + exs + 'Answer' + count == "#" + exsVar.correctAnswerId)   {
-          $('#' + exs + 'Answer' + count + "-label").css("backgroundColor","rgba(131, 222, 147, 1)");
-          $('#' + exs + 'Answer' + count + "-label").css("color", "rgb(24,24,24)");
-          break;
-        }
-        else {
-          $('#' + exs + 'Answer' + count + "-label").css("backgroundColor","rgba(227, 66, 66, 1)");
-          $('#' + exs + 'Answer' + count + "-label").css("color", "rgb(24,24,24)");
-          break;
-        }
-      }
-      else {
-        count++
-      }
-    } while (count <= int)
-}
 // данные заданий ------------
 
 var exs1 = {
@@ -104,19 +43,162 @@ var exs10 = {
   amountOfAnswers: 4
 }
 
+
+
+
+
+// ограничение выбранных чекбоксов
+function limitSelection(exs) {
+  var exsVar = eval(exs);
+  var limit = exsVar.maxScore;
+
+  $('.'+exs+'Answers').on('change', function (e) {
+      if ($('.'+exs+'Answers[type=checkbox]:checked').length > limit) {
+          $(this).prop('checked', false);
+      }
+  });}
+
+// лапками...
+limitSelection("exs3");
+
+
+// Проверяет на случай если ответы не выбраны
+function noneChousen(exs) {
+  var amountOfAnswers = eval(exs).amountOfAnswers;
+  var itr = 1;
+
+  do  {
+    if ($("#"+exs+"Answer"+String(itr)).prop('checked') == false) {
+      // $("#"+exs+"Answer"+String(itr)+"-label").css("backgroundColor","grey"); debug
+      itr++;
+    }
+    else {
+      break;
+    }
+  } while ((itr-1) <= amountOfAnswers);
+
+
+  if ((itr-1) == amountOfAnswers) {
+    return 1;
+  }
+  else {
+    return 0;
+  }
+}
+
+// В зависимости от правильности ответа выделить все тусклым цветом, затем выделить выбранные ярким
+function highlightAnswers(exs) {
+  var amountOfAnswers = eval(exs).amountOfAnswers;
+  var exsVar = eval(exs);
+  var count = 1
+
+  if (exsVar.maxScore == 1) {
+                // шаг 1
+                 do {
+                   if ('#' + exs + 'Answer' + count == "#" + exsVar.correctAnswerId)   {
+                     $('#' + exs + 'Answer' + count + "-label").css("backgroundColor","rgba(131, 192, 160, 0.5)")
+                   }
+                   else {
+                     $('#' + exs + 'Answer' + count + "-label").css("backgroundColor","rgba(192, 131, 131,0.5)")
+                   }
+                   count++
+                 } while (count <= amountOfAnswers)
+
+                 // шаг 2
+                 count = 1;
+
+                 do {
+                   if ('#' + exs + 'Answer' + count == "#" + $('.'+exs+'Answers[type=radio]:checked').attr("id"))   {
+                     if ('#' + exs + 'Answer' + count == "#" + exsVar.correctAnswerId)   {
+                       $('#' + exs + 'Answer' + count + "-label").css("backgroundColor","rgba(131, 220, 147, 1)");
+                       $('#' + exs + 'Answer' + count + "-label").css("color", "rgb(24,24,24)");
+                       break;
+                     }
+                     else {
+                       $('#' + exs + 'Answer' + count + "-label").css("backgroundColor","rgba(227, 66, 66, 1)");
+                       $('#' + exs + 'Answer' + count + "-label").css("color", "rgb(24,24,24)");
+                       break;
+                     }
+                   }
+                   else {
+                     count++
+                   }
+                 } while (count <= amountOfAnswers)
+  }
+  else if (exsVar.maxScore > 1) {
+
+              var selectedAnswers = $('.'+exs+'Answers[type=checkbox]:checked').map(function() {
+                  return $(this).attr('id');
+              }).get();
+
+                  count = 0;
+              var answerNumber = 1;
+              var arrayCorrect = 0;
+
+              // шаг 1
+                do {
+                     do {
+                       if ('#' + exs + 'Answer' + answerNumber == "#" + exsVar.correctAnswersId[arrayCorrect])   {
+                         $('#' + exs + 'Answer' + answerNumber + "-label").css("backgroundColor","rgba(131, 192, 160, 0.5)")
+                         var correct = true;
+                       }
+
+                      count++
+                      arrayCorrect++
+
+                      if (count == exsVar.correctAnswersId.length && correct !== true) {
+                        $('#' + exs + 'Answer' + answerNumber + "-label").css("backgroundColor","rgba(192, 131, 131,0.5)")
+                      }
+
+                     } while (count <= amountOfAnswers)
+
+                     count = 0
+                     arrayCorrect = 0
+                     correct = false;
+                     answerNumber++
+
+                   } while (answerNumber <= amountOfAnswers)
+
+
+
+              // шаг 2
+                 count = 0;
+                 arrayCorrect = 0
+                 var arraySelected = 0
+
+                 do {
+
+                      do {
+
+                        if (selectedAnswers[arraySelected] == exsVar.correctAnswersId[arrayCorrect]) {
+                            $('#' + selectedAnswers[arraySelected] + "-label").css("backgroundColor","rgba(131, 220, 147, 1)");
+                            $('#' + selectedAnswers[arraySelected] + "-label").css("color", "rgb(24,24,24)");
+                            var correct = true;
+                        }
+
+                        count++
+                        arrayCorrect++
+
+                        if (count == exsVar.correctAnswersId.length && correct !== true) {
+                            $('#' + selectedAnswers[arraySelected] + "-label").css("backgroundColor","rgba(227, 66, 66, 1)");
+                            $('#' + selectedAnswers[arraySelected] + "-label").css("color", "rgb(24,24,24)");
+                        }
+
+                      } while (count < exsVar.correctAnswersId.length)
+
+                      correct = false;
+                      count = 0;
+                      arrayCorrect = 0;
+                      arraySelected++;
+
+                    } while (arraySelected <= selectedAnswers.length)
+  }
+}
+
+
 //
 //
 //
-
-
-// switch () {
-//   case value1: code
-//   break;
-//   case value2: code
-//   break;
-//   default:
-// }
-
 
 
 // #1 all 1a types
@@ -133,89 +215,58 @@ function checkExs1(exs,forced) {
       else if ($("#"+exsVar.correctAnswerId).is(':checked')) {
           exsVar.condition = 1;
           }
-        else {
-          exsVar.condition = 0
-          }
-          highlightAnswersT1(exs)
+
+          highlightAnswers(exs)
           $("input."+exs+"Answers").attr("disabled", true);
       }
 }
-
-// #2
-
-// function checkExs2(forced) {
-//
-//       if (noneChousen("exs2") == true && forced == false) {}
-//       else {
-//       if (noneChousen("exs2") == true && forced == true) {
-//           exs2.condition = 0;
-//       }
-//       else if ($("#"+exs2.correctAnswerId).is(':checked')) {
-//           exs2.condition = 1;
-//           }
-//         else {
-//           exs2.condition = 0
-//           }
-//           highlightAnswersT1("exs2")
-//           $("input.exs2Answers").attr("disabled", true);
-//       }
-// }
-
-
-
 
 
 //-----------------------------------
 // type 1b
 
 
+function checkExsT2(exs,forced) {
 
-
-function checkExs3(forced) {
-    var selectedAnswers = $('input[type=checkbox]:checked').map(function() {
+    var amountOfAnswers = eval(exs).amountOfAnswers;
+    var exsVar = eval(exs);
+    var selectedAnswers = $('.'+exs+'Answers[type=checkbox]:checked').map(function() {
         return $(this).attr('id');
     }).get();
 
-
-
-    if (noneChousen("exs3") == true) {}
-    else if (forced == true) {
-        exs3.condition = 0;
-        $("input.exs3Answers").attr("disabled", true);
-    }
-    else if (JSON.stringify(selectedAnswers)==JSON.stringify(exs3.correctAnswersId)) {
-
-        $("input.exs3Answers").attr("disabled", true);
-        $('#' + selectedAnswers[0] + '-label').css("backgroundColor", "green");
-        $('#' + selectedAnswers[1] + '-label').css("backgroundColor", "green");
-        $('#' + selectedAnswers[0] + '-label').css("color", "rgb(24,24,24)");
-        $('#' + selectedAnswers[1] + '-label').css("color", "rgb(24,24,24)");
-        exs3.condition = 2;
-    }
-    else if (selectedAnswers[0] == exs3.correctAnswersId[0] || selectedAnswers[0] == exs3.correctAnswersId[1]) {
-        $("input.exs3Answers").attr("disabled", true);
-        $('#' + selectedAnswers[0] + '-label').css("backgroundColor", "green");
-        $('#' + selectedAnswers[1] + '-label').css("backgroundColor", "red");
-        $('#' + selectedAnswers[0] + '-label').css("color", "rgb(24,24,24)");
-        $('#' + selectedAnswers[1] + '-label').css("color", "rgb(24,24,24)");
-        exs3.condition = 1;
-    }
-    else if (selectedAnswers[1] == exs3.correctAnswersId[0] || selectedAnswers[1] == exs3.correctAnswersId[1]) {
-        $("input.exs3Answers").attr("disabled", true);
-        $('#' + selectedAnswers[0] + '-label').css("backgroundColor", "red");
-        $('#' + selectedAnswers[1] + '-label').css("backgroundColor", "green");
-        $('#' + selectedAnswers[0] + '-label').css("color", "rgb(24,24,24)");
-        $('#' + selectedAnswers[1] + '-label').css("color", "rgb(24,24,24)");
-        exs3.condition = 1;
+    if (noneChousen(exs) == true && forced == false) {}
+    else {
+    if (noneChousen(exs) == true && forced == true) {
+      exsVar.condition = 0;
     }
     else {
-        $("input.exs3Answers").attr("disabled", true);
-        $('#' + selectedAnswers[0] + '-label').css("backgroundColor", "red");
-        $('#' + selectedAnswers[1] + '-label').css("backgroundColor", "red");
-        $('#' + selectedAnswers[0] + '-label').css("color", "rgb(24,24,24)");
-        $('#' + selectedAnswers[1] + '-label').css("color", "rgb(24,24,24)");
-        exs3.condition = 0;
-    }}
+      var count = 0;
+      var arrayCorrect = 0
+      var arraySelected = 0
+      exsVar.condition = 0
+
+      do {
+           do {
+
+             if (selectedAnswers[arraySelected] == exsVar.correctAnswersId[arrayCorrect]) {
+                 exsVar.condition++
+             }
+
+             count++
+             arrayCorrect++
+
+           } while (count < exsVar.correctAnswersId.length)
+
+           count = 0;
+           arrayCorrect = 0;
+           arraySelected++;
+
+         } while (arraySelected <= selectedAnswers.length)
+    }
+
+    $("input."+exs+"Answers").attr("disabled", true);
+    highlightAnswers(exs);
+  }}
 
 
 
@@ -223,7 +274,7 @@ function checkExs3(forced) {
     function disableUnchecked() {
       if (exs1.condition == "unknown") {checkExs1('exs1',true)}
       if (exs2.condition == "unknown") {checkExs1('exs2',true)}
-      if (exs3.condition == "unknown") {checkExs3(true)}
+      if (exs3.condition == "unknown") {checkExsT2(true)}
       if (exs4.condition == "unknown") {checkExs1('exs4',true)}
       if (exs10.condition == "unknown") {checkExs1('exs10',true)}
     }
