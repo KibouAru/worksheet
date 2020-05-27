@@ -30,10 +30,28 @@ var exs5 = {
   maxScore: 1,
   amountOfAnswers: 3
 }
+var exs6 = {
+  condition: "unknown",
+  correctAnswersId: ["exs6Answer1","exs6Answer4"],
+  maxScore: 2,
+  amountOfAnswers: 4
+}
 var exs7 = {
   condition: "unknown",
   correctAnswerId: "exs7Answer3",
   maxScore: 1,
+  amountOfAnswers: 4
+}
+var exs8 = {
+  condition: "unknown",
+  correctAnswersId: ["exs8Answer1","exs8Answer3"],
+  maxScore: 2,
+  amountOfAnswers: 4
+}
+var exs9 = {
+  condition: "unknown",
+  correctAnswersId: ["exs9Answer2","exs9Answer4"],
+  maxScore: 2,
   amountOfAnswers: 4
 }
 var exs10 = {
@@ -203,7 +221,7 @@ function highlightAnswers(exs) {
 
 // #1 all 1a types
 
-function checkExs1(exs,forced) {
+function checkExsT1(exs,forced) {
 
     var exsVar = eval(exs);
 
@@ -272,19 +290,29 @@ function checkExsT2(exs,forced) {
 
 
     function disableUnchecked() {
-      if (exs1.condition == "unknown") {checkExs1('exs1',true)}
-      if (exs2.condition == "unknown") {checkExs1('exs2',true)}
-      if (exs3.condition == "unknown") {checkExsT2(true)}
-      if (exs4.condition == "unknown") {checkExs1('exs4',true)}
-      if (exs10.condition == "unknown") {checkExs1('exs10',true)}
+      if (exs1.condition == "unknown") {checkExsT1('exs1',true)}      //T1A
+      if (exs2.condition == "unknown") {checkExsT1('exs2',true)}      //T1A
+      if (exs3.condition == "unknown") {checkExsT2('exs3',true)}      //T2A
+      if (exs4.condition == "unknown") {checkExsT1('exs4',true)}      //T1A
+      if (exs5.condition == "unknown") {checkExsT1('exs5',true)}      //T1B
+      if (exs6.condition == "unknown") {checkExsT2('exs6',true)}      //T2A
+      if (exs7.condition == "unknown") {checkExsT1('exs7',true)}      //T1B
+      if (exs8.condition == "unknown") {checkExsT2('exs8',true)}      //T2A
+      if (exs9.condition == "unknown") {checkExsT2('exs9',true)}      //T2A
+      if (exs10.condition == "unknown") {checkExsT1('exs10',true)}    //T1A
     }
 
     function displayResult() {
-      $("#exs1Result span span").text(exs1.condition)
-      $("#exs2Result span span").text(exs2.condition)
-      $("#exs3Result span span").text(exs3.condition)
-      $("#exs4Result span span").text(exs4.condition)
-      $("#exs10Result span span").text(exs10.condition)
+      $("#exs1Result span").text(exs1.condition + '/' + exs1.maxScore)
+      $("#exs2Result span").text(exs2.condition + '/' + exs2.maxScore)
+      $("#exs3Result span").text(exs3.condition + '/' + exs3.maxScore)
+      $("#exs4Result span").text(exs4.condition + '/' + exs4.maxScore)
+      $("#exs5Result span").text(exs5.condition + '/' + exs5.maxScore)
+      $("#exs6Result span").text(exs6.condition + '/' + exs6.maxScore)
+      $("#exs7Result span").text(exs7.condition + '/' + exs7.maxScore)
+      $("#exs8Result span").text(exs8.condition + '/' + exs8.maxScore)
+      $("#exs9Result span").text(exs9.condition + '/' + exs9.maxScore)
+      $("#exs10Result span").text(exs10.condition + '/' + exs10.maxScore)
     }
 
     // function colorResults() {
@@ -311,7 +339,7 @@ function checkExsT2(exs,forced) {
   function checkAllButton() {
     $('.submission-container').fadeOut(200);
     $('.results-box').slideDown(300,'linear');
-    $('html,body').animate({ scrollTop: 2000 }, 'slow')
+    $('html,body').animate({ scrollTop: 3000 }, 'slow')
 
     disableUnchecked();
     displayResult();

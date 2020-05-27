@@ -113,8 +113,8 @@ body {
 }
 
 .span {
-  position: relative;
-  left: 40%;
+  position: absolute;
+  left: 70%;
 }
 
 .dot-box {
