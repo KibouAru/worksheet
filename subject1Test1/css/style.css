@@ -1,0 +1,160 @@
+/* font-family: 'PT Sans Narrow', sans-serif; */
+body {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 25px;
+  background-color: #f4f4f4;
+}
+
+/* #DCD0C0 #C0B283 #F4F4F4 #373737 */
+
+.icon-div {
+  display: inline-block;
+}
+.icon {
+    position: relative;
+    bottom: 7px;
+    margin: 0 20px 0 20px;
+    width: 30px;
+    height: auto;
+}
+#up {
+  position: fixed;
+  right: 90%;
+  bottom: 10%;
+}
+.title {
+  font-size: 35px;
+  display: inline-block;
+}
+
+.title-container {
+  padding: 3% 10%
+}
+
+.main-container {
+    width: 70%;
+    background-color: #C0B283;
+    padding: 1% 6% 3%;
+}
+.text-part {
+  display: inline-block;
+  vertical-align: top;
+  width: 71%;
+  min-height: 320px;
+}
+.question-div {
+  width: 95%;
+}
+.image-part {
+  display: inline-block;
+  vertical-align: top;
+}
+.image {
+  width: 300px;
+  height: 300px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+.exs-container {
+  background-color: #DCD0C0;
+  padding: 15px 15px 2px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.checkboxes {
+  width: 25px; height: 25px;
+}
+
+.checkboxes-labels {
+  margin-left: 20px;
+}
+
+.answers-box {
+  margin-top: 10px;
+  position: relative;
+  top: 10px;
+}
+
+.answers-div {
+  width: 80%;
+}
+.answers-div-alt {
+  width: 98%
+}
+.answers-div:nth-child(odd) {
+  background: rgba(167, 181, 217,0.3);
+}
+.answers-div-alt:nth-child(odd) {
+  background: rgba(167, 181, 217,0.3);
+}
+
+.exs-check-button {
+  width: 100px;
+  position: relative;
+  left: 90%;
+  bottom: 10px;
+}
+
+.submission-container {
+  height: 0;
+}
+
+.results-wrap {
+  padding: 0 10% 20%;
+  margin-top: 20px;
+}
+
+.results-box {
+  height: 500px;
+  background-color: #DCD0C0;
+  border-radius: 5px;
+  display: none;
+}
+
+.results {
+  width: 50%;
+  padding: 5%;
+  height: 100%;
+  background-color: #c4bba5;
+}
+
+.results-rows {
+  margin-bottom: 10%;
+}
+
+.results-cols {
+  background-color: rgba(167, 181, 217,0.3);
+  margin-right: 8%;
+}
+
+.span {
+  position: absolute;
+  left: 70%;
+}
+
+.dot-box {
+  height: 100%;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  bottom: 100%;
+}
+
+.dot {
+  position: relative;
+  left: 28%;
+  top: 10%;
+
+  height: 200px;
+  width: 200px;
+  background-color: #c4bba5;
+  border-radius: 50%;
+  display: inline-block;
+
+  text-align: center;
+  padding: 38px;
+  font-size: 82px;
+  font-weight: bold;
+  color: #DCD0C0;
+}

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Работа #1</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+
+  <div class="container-fluid title-container">
+
+    <div class="icon-div" id="back"> <img class="icon" src="../resources/back.svg" alt="Назад"> </div>
+    <div class="title">Внешние запоминающие устройства/Работа 1</div>
+    <!-- <div class="icon-div" id="next"> <img class="icon" src="../resources/next.svg" alt="Вперед"> </div> -->
+    <div class="icon-div" id="up"> <img class="icon" src="../resources/up.svg" alt="Наверх"> </div>
+
+  </div>
+
+  <div class="container-fluid main-container">
+
+<!----------------------------------->
+
+
+      <div class="container-fluid exs-container">
+        <div class="question1">#1 Информатика - это?  </div>
+        <div class="answers-box">
+
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs1Answers" type="radio" name="exs1Answers" id="exs1Answer1" value="option1">
+            <label class="form-check-label checkboxes-labels" for="exs1Answer1" id="exs1Answer1-label">
+               Это область человеческой деятельности, связанная с процессами преобразования информации с помощью компьютеров и их взаимодействием со средой применения.
+            </label>
+          </div>
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs1Answers" type="radio" name="exs1Answers" id="exs1Answer2" value="option2">
+            <label class="form-check-label checkboxes-labels" for="exs1Answer2" id="exs1Answer2-label">
+              Это наука, изучающая структуру и наиболее общие свойства информации, ее поиск, хранение, передачу и обработку с применением ЭВМ.
+            </label>
+          </div>
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs1Answers" type="radio" name="exs1Answers" id="exs1Answer3" value="option3">
+            <label class="form-check-label checkboxes-labels" for="exs1Answer3" id="exs1Answer3-label">
+            	Комплексная научная и инженерная дисциплина, изучающая все аспекты разработки, проектирования, функционирования компьютерных систем переработки информации, их применения и воздействия на различные области человеческой деятельности
+            </label>
+          </div>
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs1Answers" type="radio" name="exs1Answers" id="exs1Answer4" value="option4">
+            <label class="form-check-label checkboxes-labels" for="exs1Answer4" id="exs1Answer4-label">
+              Технологические операции с научно-технической информацией, документалистика, библиотечное дело, хранение и обработка материалов научных исследований
+            </label>
+          </div>
+        </div>
+
+        <button onclick="checkExsT1('exs1',false)" type="button" name="button" class="exs-check-button btn btn-dark">Проверить</button>
+      </div>
+      <!-- ----------------2------------------ -->
+
+      <div class="container-fluid exs-container">
+        <div class="question1">#2 Группа компьютеров, связанных каналами передачи информации и находящихся в пределах территории, ограниченной небольшими размерами: комнаты, здания, предприятия, называется </div>
+        <div class="answers-box">
+
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs2Answers" type="radio" name="exs2Answers" id="exs2Answer1">
+            <label class="form-check-label checkboxes-labels" for="exs2Answer1" id="exs2Answer1-label">
+          	Глобальной компьютерной сетью
+            </label>
+          </div>
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs2Answers" type="radio" name="exs2Answers" id="exs2Answer2">
+            <label class="form-check-label checkboxes-labels" for="exs2Answer2" id="exs2Answer2-label">
+              Информационной системой с гиперсвязями
+            </label>
+          </div>
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs2Answers" type="radio" name="exs2Answers" id="exs2Answer3">
+            <label class="form-check-label checkboxes-labels" for="exs2Answer3" id="exs2Answer3-label">
+              Локальной компьютерной сетью
+            </label>
+          </div>
+          <div class="form-check answers-div">
+            <input class="form-check-input checkboxes exs2Answers" type="radio" name="exs2Answers" id="exs2Answer4">
+            <label class="form-check-label checkboxes-labels" for="exs2Answer4" id="exs2Answer4-label">
+            Электронной почтой
+            </label>
+          </div>
+        </div>
+
+        <button onclick="checkExsT1('exs2',false)" type="button" name="button" class="exs-check-button btn btn-dark">Проверить</button>
+      </div>
+
+    <!-- -------------3--------------- -->
+
+    <div class="container-fluid exs-container">
+      <div class="question1">#3 При стандартных установках Windows двойным щелчком левой кнопкой мыши можно:</div>
+      <div class="answers-box">
+
+        <div class="form-check answers-div">
+          <input class="form-check-input checkboxes exs3Answers" type="checkbox" name="exs3Answers" id="exs3Answer1">
+          <label class="form-check-label checkboxes-labels" for="exs3Answer1" id="exs3Answer1-label">
+            	Выделить объект
+          </label>
+        </div>
+        <div class="form-check answers-div">
+          <input class="form-check-input checkboxes exs3Answers" type="checkbox" name="exs3Answers" id="exs3Answer2">
+          <label class="form-check-label checkboxes-labels" for="exs3Answer2" id="exs3Answer2-label">
+            Открыть объект
+          </label>
+        </div>
+        <div class="form-check answers-div">
+          <input class="form-check-input checkboxes exs3Answers" type="checkbox" name="exs3Answers" id="exs3Answer3">
+          <label class="form-check-label checkboxes-labels" for="exs3Answer3" id="exs3Answer3-label">
+            	Выделить слово в текстовом документе
+          </label>
+        </div>
+        <div class="form-check answers-div">
+          <input class="form-check-input checkboxes exs3Answers" type="checkbox" name="exs3Answers" id="exs3Answer4">
+          <label class="form-check-label checkboxes-labels" for="exs3Answer4" id="exs3Answer4-label">
+            Установить текущее положение указателя ввода информации
+          </label>
+        </div>
+      </div>
+
+      <button onclick="checkExsT2('exs3',false)" type="button" name="button" class="exs-check-button btn btn-dark">Проверить</button>
+    </div>
+<!-------------------->
+
+                <div class="container-fluid exs-container">
+                  <div class="question1">#4 Для работы с простыми текстовыми документами используется приложение </div>
+                  <div class="answers-box">
+
+                    <div class="form-check answers-div">
+                      <input class="form-check-input checkboxes exs4Answers" type="radio" name="exs4Answers" id="exs4Answer1" value="option1">
+                      <label class="form-check-label checkboxes-labels" for="exs4Answer1" id="exs4Answer1-label">
+                      Блокнот
+                      </label>
+                    </div>
+                    <div class="form-check answers-div">
+                      <input class="form-check-input checkboxes exs4Answers" type="radio" name="exs4Answers" id="exs4Answer2" value="option2">
+                      <label class="form-check-label checkboxes-labels" for="exs4Answer2" id="exs4Answer2-label">
+                      Адресная книга
+                      </label>
+                    </div>
+                    <div class="form-check answers-div">
+                      <input class="form-check-input checkboxes exs4Answers" type="radio" name="exs4Answers" id="exs4Answer3" value="option3">
+                      <label class="form-check-label checkboxes-labels" for="exs4Answer3" id="exs4Answer3-label">
+                        Microsoft Paint
+                      </label>
+                    </div>
+                    <div class="form-check answers-div">
+                      <input class="form-check-input checkboxes exs4Answers" type="radio" name="exs4Answers" id="exs4Answer4" value="option4">
+                      <label class="form-check-label checkboxes-labels" for="exs4Answer4" id="exs4Answer4-label">
+                      Проводник
+                      </label>
+                    </div>
+                  </div>
+
+                  <button onclick="checkExsT1('exs4',false)" type="button" name="button" class="exs-check-button btn btn-dark">Проверить</button>
+                </div>
+
+                <!-------------------->
+
+
+                        <div class="container-fluid exs-container">
+
+                          <div class="text-part">
+                          <div class="question-div"> #5 Что такое процессор? </div>
+
+                              <div class="answers-box">
+                                <div class="form-check answers-div-alt">
+                                  <input class="form-check-input checkboxes exs5Answers" type="radio" name="exs5Answers" id="exs5Answer1">
+                                  <label class="form-check-label checkboxes-labels" for="exs5Answer1" id="exs5Answer1-label">
+                                  Электронный блок, либо интегральная схема (микропроцессор), исполняющая машинные инструкции (код программ).
+                                  </label>
+                                </div>
+                                <div class="form-check answers-div-alt">
+                                  <input class="form-check-input checkboxes exs5Answers" type="radio" name="exs5Answers" id="exs5Answer2">
+                                  <label class="form-check-label checkboxes-labels" for="exs5Answer2" id="exs5Answer2-label">
+                                  Энергозависимая часть системы компьютерной памяти, в которой во время работы компьютера хранится выполняемые программы,
+                                  а также входные, выходные и промежуточные данные, обрабатываемые процессором.
+                                  </label>
+                                </div>
+                                <div class="form-check answers-div-alt">
+                                  <input class="form-check-input checkboxes exs5Answers" type="radio" name="exs5Answers" id="exs5Answer3">
+                                  <label class="form-check-label checkboxes-labels" for="exs5Answer3" id="exs5Answer3-label">
+                                    Система, состоящая из небольших программ, предназначенных для автоматического распознавания
+                                    установленного на компьютер оборудования, его настройки и проверки функционирования.
+                                  </label>
+                                </div>
+                              </div>
+                          </div>
+
+                          <div class="image-part"> <img class="image" src="../resources/image1.png" alt=""> </div>
+
+                          <button onclick="checkExsT1('exs5',false)" type="button" name="button" class="exs-check-button btn btn-dark">Проверить</button>
+                        </div>
+                        <!--------------------->
+
+                        <div class="container-fluid exs-container">
+                          <div class="question1">#6 При стандартных установках Windows двойным щелчком левой кнопкой мыши можно:</div>
+                          <div class="answers-box">
+
+                            <div class="form-check answers-div">
+                              <input class="form-check-input checkboxes exs6Answers" type="checkbox" name="exs6Answers" id="exs6Answer1">
+                              <label class="form-check-label checkboxes-labels" for="exs6Answer1" id="exs6Answer1-label">
+                                  Выделить объект
+                              </label>
+                            </div>
+                            <div class="form-check answers-div">
+                              <input class="form-check-input checkboxes exs6Answers" type="checkbox" name="exs6Answers" id="exs6Answer2">
+                              <label class="form-check-label checkboxes-labels" for="exs6Answer2" id="exs6Answer2-label">
+                                Открыть объект
+                              </label>
+                            </div>
+                            <div class="form-check answers-div">
+                              <input class="form-check-input checkboxes exs6Answers" type="checkbox" name="exs6Answers" id="exs6Answer3">
+                              <label class="form-check-label checkboxes-labels" for="exs6Answer3" id="exs6Answer3-label">
+                                  Выделить слово в текстовом документе
+                              </label>
+                            </div>
+                            <div class="form-check answers-div">
+                              <input class="form-check-input checkboxes exs6Answers" type="checkbox" name="exs6Answers" id="exs6Answer4">
+                              <label class="form-check-label checkboxes-labels" for="exs6Answer4" id="exs6Answer4-label">
+                                Установить текущее положение указателя ввода информации
+                              </label>
+                            </div>
+                          </div>
+
+                          <button onclick="checkExsT2('exs6',false)" type="button" name="button" class="exs-check-button btn btn-dark">Проверить</button>
+                        </div>
+                    <!-------------------->
+
+
+                        <div class="container-fluid exs-container">
+
+                          <div class="text-part">
+                          <div class="question-div"> #7 Какой тип информационного накопителя изображен на картинке? </div>
+
+                              <div class="answers-box">
+                                <div class="form-check answers-div-alt">
+                                  <input class="form-check-input checkboxes exs7Answers" type="radio" name="exs7Answers" id="exs7Answer1">
+                                  <label class="form-check-label checkboxes-labels" for="exs7Answer1" id="exs7Answer1-label">
+                                  Жёсткий диск
+                                  </label>
+                                </div>
+                                <div class="form-check answers-div-alt">
+                                  <input class="form-check-input checkboxes exs7Answers" type="radio" name="exs7Answers" id="exs7Answer2">
+                                  <label class="form-check-label checkboxes-labels" for="exs7Answer2" id="exs7Answer2-label">
+                                  Flash-накопитель
+                                  </label>
+                                </div>
+                                <div class="form-check answers-div-alt">
+                                  <input class="form-check-input checkboxes exs7Answers" type="radio" name="exs7Answers" id="exs7Answer3">
+                                  <label class="form-check-label checkboxes-labels" for="exs7Answer3" id="exs7Answer3-label">
+                                    Оперативная память
+                                  </label>
+                                </div>
+                                <div class="form-check answers-div-alt">
+                                  <input class="form-check-input checkboxes exs7Answers" type="radio" name="exs7Answers" id="exs7Answer4">
+                                  <label class="form-check-label checkboxes-labels" for="exs7Answer4" id="exs7Answer4-label">
+                                    Внутренняя память
+                                  </label>
+                                </div>
+                              </div>
+                          </div>
+
+                          <div class="image-part"> <img class="image" src="../resources/image2.png" alt=""> </div>
+
+                          <button onclick="checkExsT1('exs7',false)" type="button" name="button" class="exs-check-button btn btn-dark">Проверить</button>
+                        </div>
+
+                <!----------------------------------->
+                <div class="container-fluid exs-container">
+                  <div class="question1">#8 Устройствами внешней памяти являются?:</div>
+                  <div class="answers-box">
+
+                    <div class="form-check answers-div">
+                      <input class="form-check-input checkboxes exs8Answers" type="checkbox" name="exs8Answers" id="exs8Answer1">
+                      <label class="form-check-label checkboxes-labels" for="exs8Answer1" id="exs8Answer1-label">
+                           Накопители на гибких магнитных дисках
+                      </label>
+                    </div>
+                    <div class="form-check answers-div">
+                      <input class="form-check-input checkboxes exs8Answers" type="checkbox" name="exs8Answers" id="exs8Answer2">
+                      <label class="form-check-label checkboxes-labels" for="exs8Answer2" id="exs8Answer2-label">
+                      Оперативные запоминающие устройства
+                      </label>
+                    </div>
+                    <div class="form-check answers-div">
+                      <input class="form-check-input checkboxes exs8Answers" type="checkbox" name="exs8Answers" id="exs8Answer3">
+                      <label class="form-check-label checkboxes-labels" for="exs8Answer3" id="exs8Answer3-label">
+                          Накопители на жестких магнитных дисках
+                      </label>
+                    </div>
+                    <div class="form-check answers-div">
+                      <input class="form-check-input checkboxes exs8Answers" type="checkbox" name="exs8Answers" id="exs8Answer4">
+                      <label class="form-check-label checkboxes-labels" for="exs8Answer4" id="exs8Answer4-label">
+                      Стриммеры
+                      </label>
+                    </div>
+                  </div>
+
+                  <button onclick="checkExsT2('exs8',false)" type="button" name="button" class="exs-check-button btn btn-dark">Проверить</button>
+                </div>
+            <!-------------------->
+            <div class="container-fluid exs-container">
+              <div class="question1">#9 К устройствам ввода информации относятся?</div>
+              <div class="answers-box">
+
+                <div class="form-check answers-div">
+                  <input class="form-check-input checkboxes exs9Answers" type="checkbox" name="exs9Answers" id="exs9Answer1">
+                  <label class="form-check-label checkboxes-labels" for="exs9Answer1" id="exs9Answer1-label">
+                    Джойстик
+                  </label>
+                </div>
+                <div class="form-check answers-div">
+                  <input class="form-check-input checkboxes exs9Answers" type="checkbox" name="exs9Answers" id="exs9Answer2">
+                  <label class="form-check-label checkboxes-labels" for="exs9Answer2" id="exs9Answer2-label">
+                  Мышь
+                  </label>
+                </div>
+                <div class="form-check answers-div">
+                  <input class="form-check-input checkboxes exs9Answers" type="checkbox" name="exs9Answers" id="exs9Answer3">
+                  <label class="form-check-label checkboxes-labels" for="exs9Answer3" id="exs9Answer3-label">
+                    Сетевой адаптер
+                  </label>
+                </div>
+                <div class="form-check answers-div">
+                  <input class="form-check-input checkboxes exs9Answers" type="checkbox" name="exs9Answers" id="exs9Answer4">
+                  <label class="form-check-label checkboxes-labels" for="exs9Answer4" id="exs9Answer4-label">
+                    Сенсорный экран
+                  </label>
+                </div>
+              </div>
+
+              <button onclick="checkExsT2('exs9',false)" type="button" name="button" class="exs-check-button btn btn-dark">Проверить</button>
+            </div>
+        <!-------------------->
+
+                <div class="container-fluid exs-container">
+                  <div class="question1">#10 Структура компьютера — это?</div>
+                  <div class="answers-box">
+
+                    <div class="form-check answers-div">
+                      <input class="form-check-input checkboxes exs10Answers" type="radio" name="exs10Answers" id="exs10Answer1" value="option1">
+                      <label class="form-check-label checkboxes-labels" for="exs10Answer1" id="exs10Answer1-label">
+                      Комплекс электронных устройств, осуществляющих обработку информации
+                      </label>
+                    </div>
+                    <div class="form-check answers-div">
+                      <input class="form-check-input checkboxes exs10Answers" type="radio" name="exs10Answers" id="exs10Answer2" value="option2">
+                      <label class="form-check-label checkboxes-labels" for="exs10Answer2" id="exs10Answer2-label">
+                       Некоторая модель, устанавливающая состав, по- рядок и принципы взаимодействия входящих в нее компонентов
+                      </label>
+                    </div>
+                    <div class="form-check answers-div">
+                      <input class="form-check-input checkboxes exs10Answers" type="radio" name="exs10Answers" id="exs10Answer3" value="option3">
+                      <label class="form-check-label checkboxes-labels" for="exs10Answer3" id="exs10Answer3-label">
+                        Комплекс программных и аппаратных средств.
+                      </label>
+                    </div>
+                    <div class="form-check answers-div">
+                      <input class="form-check-input checkboxes exs10Answers" type="radio" name="exs10Answers" id="exs10Answer4" value="option4">
+                      <label class="form-check-label checkboxes-labels" for="exs10Answer4" id="exs10Answer4-label">
+                      Максимальный объем внутренней памяти и производительность компьютера.
+                      </label>
+                    </div>
+                  </div>
+
+                  <button onclick="checkExsT1('exs10',false)" type="button" name="button" class="exs-check-button btn btn-dark">Проверить</button>
+                </div>
+
+
+
+        <!----------------------------------->
+
+        <div class="container-fluid text-center submission-container">
+
+            <button onclick="checkAllButton()" type="button" class="btn btn-dark check-button">Проверить и закончить</button>
+
+        </div>
+
+    <div class="results-wrap">
+    <div  class="results-box">
+
+
+        <div class="results">
+          <div class="row results-rows">
+            <div id="exs1Result" class="col-5 results-cols">#1  - <span class="span"></span></div>
+            <div id="exs6Result" class="col-5 results-cols">#6  - <span class="span"></span></div>
+          </div>
+          <div class="row results-rows">
+            <div id="exs2Result" class="col-5 results-cols">#2  - <span class="span"></span></div>
+            <div id="exs7Result" class="col-5 results-cols">#7  - <span class="span"></span></div>
+          </div>
+          <div class="row results-rows">
+            <div id="exs3Result" class="col-5 results-cols">#3  - <span class="span"></span></div>
+            <div id="exs8Result" class="col-5 results-cols">#8  - <span class="span"></span></div>
+          </div>
+          <div class="row results-rows">
+            <div id="exs4Result" class="col-5 results-cols">#4  - <span class="span"></span></div>
+            <div id="exs9Result" class="col-5 results-cols">#9  - <span class="span"></span></div>
+          </div>
+          <div class="row results-rows">
+            <div id="exs5Result" class="col-5 results-cols">#5  - <span class="span"></span></div>
+            <div id="exs10Result" class="col-5 results-cols">#10 - <span class="span"></span></div>
+          </div>
+        </div>
+          <div class="dot-box">
+          <span class="dot">%</span>
+          </div>
+
+    </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+    <script src="js/script.js" charset="utf-8"></script>
+</body>
+
+</html>
